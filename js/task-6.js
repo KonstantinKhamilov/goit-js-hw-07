@@ -13,6 +13,12 @@ const boxesContainer = document.querySelector("#boxes");
 
 // Функция для создания коллекции элементов
 function createBoxes(amount) {
+  // Проверяем, что количество элементов в допустимом диапазоне
+  if (amount < 1 || amount > 100) {
+    alert(`Невірне значення! Введіть від 1-го до ста!`);
+    return;
+  }
+
   // Создаем массив для хранения новых элементов
   let newBoxes = [];
 
